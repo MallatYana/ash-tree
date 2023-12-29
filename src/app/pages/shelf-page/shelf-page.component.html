@@ -1,0 +1,20 @@
+<div class="ash-window" (click)="hideComment()" (touchstart)="hideComment()">
+  <div class="position-relative ash-window-full-inside">
+    <img
+      class="ash-window-full-inside position-absolute"
+      src="assets/img/shelf-1.png"
+      id="main-img"
+    >
+
+    <div class="pointer click-me-btn bgg">
+      <div class="memory-btn"></div>
+    </div>
+
+    <div *ngIf="isCommentShowed"
+         class="shadow-block position-absolute ash-main-font text-white block-comment">
+      <p>И зачем столько скопил... Давно пора почистить. Вещи, вещи, вещи, а ценность этих вещей? Думать о ней больно.</p>
+    </div>
+
+    <app-modal-story [shelf]="1" [num]="1"></app-modal-story>
+  </div>
+</div>

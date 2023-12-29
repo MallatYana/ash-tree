@@ -1,0 +1,44 @@
+<!--
+<div class="ash-window position-relative">
+    <img
+      class="ash-window-full-inside"
+      src="assets/img/main-page.png"
+      id="main-img"
+    >
+    <div class="position-absolute next-btn text-white" *ngIf="!isFirstStepClicked" (click)="showTitle()">
+      <span class="lnr lnr-chevron-right-circle click-me-btn"></span>
+    </div>
+    <div class="position-absolute next-btn text-white" *ngIf="isSecondStepShowed" (click)="navigate()">
+      <span class="lnr lnr-chevron-right-circle click-me-btn"></span>
+    </div>
+    <div class="text-main-page position-absolute text-center"
+    [ngClass]="{'animation-started': isFirstStepClicked}"
+    (click)="showSecondStep()">
+      <h1 class="ash-main-font text-white hover-underline-animation pointer">Ясень</h1>
+      <h2 class="ash-main-font text-white">воспоминания</h2>
+    </div>
+</div> -->
+
+<div class="ash-window">
+  <div class="position-relative ash-window-full-inside">
+    <img
+      class="ash-window-full-inside position-absolute"
+      src="assets/img/main-page.png"
+      id="main-img"
+    >
+    <div class="position-absolute next-btn text-white" *ngIf="!isFirstStepClicked" (click)="showTitle()">
+      <span class="lnr lnr-chevron-right-circle click-me-btn"></span>
+    </div>
+    <div class="position-absolute next-btn text-white" *ngIf="isSecondStepShowed" (click)="navigate()">
+      <span class="lnr lnr-chevron-right-circle click-me-btn"></span>
+    </div>
+    <div class="text-main-page position-absolute text-center"
+         [ngClass]="{'animation-started': isFirstStepClicked}"
+         (click)="showSecondStep()">
+      <h1 class="ash-main-font text-white hover-underline-animation pointer">Ясень</h1>
+      <h2 class="ash-main-font text-white">воспоминания</h2>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,169 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: black !important;
+}
+
+//main
+.ash-window {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 10px;
+
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: 0px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.ash-window-full-inside {
+  height: 100vh;
+  width: 150vh;
+}
+
+.ash-window-clip {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+  .ash-pc-window {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ash-window, .ash-window-clip {
+    width: max(150vh, 1000px);
+  }
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/assets/fonts/Cormorant-Regular.ttf") format("truetype");
+}
+.ash-main-font {
+  font-family: Cormorant;
+}
+
+//text-colors
+.text-white {
+  color: white;
+}
+
+//animations
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 10px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+@keyframes slide-down {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 160px;
+    opacity: 1;
+  }
+}
+@keyframes opacity-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes underline-key {
+  from {
+    border-bottom: none
+  }
+  to {
+    border-bottom: 1px solid white;
+  }
+}
+
+.click-me-btn {
+  animation: opacity-animation 2s infinite;
+  animation-direction: alternate;
+  transition-timing-function: linear;
+}
+
+.animation-started {
+  animation-play-state: running !important;
+}
+.animation-started {
+  animation-play-state: paused !important;
+}
+
+//cursors
+.pointer {
+  cursor: pointer;
+}
+
+//main-btn
+.next-btn {
+  font-size: 70px;
+  position: absolute;
+  z-index: 1050;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+//block
+.shadow-block {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.block-story {
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  padding: 40px;
+}
+
+.block-comment {
+  bottom: min(5%, 5vh);
+  width: min(90%, 90vw);
+  left: min(5%, 5vw)
+}
+.memory-btn {
+  background: rgba(0,0,0,0);
+  border-radius: 40px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

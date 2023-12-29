@@ -1,0 +1,40 @@
+<ng-container *ngIf="story == 0">
+  <div class="text-center text-white mt-5">
+    <h1 class="ash-main-font"
+      style="font-size: 120px; margin-top: 100px">
+      Что-то сломалось
+    </h1>
+    <h2 class="ash-main-font">
+      если бы мы знали, но мы не знаем
+    </h2>
+    <div class="mt-5 ash-main-font" [routerLink]="'/'">
+      могу предложить только сходить на <span class="pointer">главную</span>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="story !== 0">
+  <div class="ash-window-clip position-relative">
+    <img
+      class="ash-window-full-inside"
+      src="assets/img/intra-{{story}}.png"
+    >
+    <div class="shadow-block block-story position-absolute ash-main-font">
+      <ng-container *ngIf="story == 1">
+        <ng-container *ngTemplateOutlet="story1"></ng-container>
+      </ng-container>
+    </div>
+    <div class="position-absolute next-btn text-white" (click)="navigate()">
+      <span class="lnr lnr-chevron-right-circle click-me-btn"></span>
+    </div>
+  </div>
+</ng-container>
+
+
+<ng-template #story1>
+  <h1 class="text-white text-center mb-3">Мысли</h1>
+  <p class="text-white">Голова тяжелая, не встать. Клонит, в сон клонит, хоть под лавку прячься.</p>
+  <p class="text-white">А спрячешься ли?</p>
+  <p class="text-white">Из рук все валится, ежели не сосредоточусь... Давно уж так. Моргнул - упало. Поднять-то просто так потом не поднимешь. Ну хоть помню. Где что лежит - это редко, но каждую вещь помню.</p>
+  <p class="text-white">Забыть бы...</p>
+</ng-template>

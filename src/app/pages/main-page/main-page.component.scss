@@ -1,0 +1,37 @@
+.text-main-page {
+  animation: slide-down 3s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  transition-timing-function: linear;
+  animation-play-state: paused;
+
+  right: 72px;
+}
+
+h1 {
+  font-size: 75px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  margin-top: -10px;
+  font-size: 25px;
+}
+
+.animation-started {
+  animation-play-state: running !important;
+}
+
+@media (max-width: 420px) {
+  .text-main-page {
+    right: 60px;
+  }
+
+  h1 {
+    font-size: 60px
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
